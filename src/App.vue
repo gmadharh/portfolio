@@ -30,9 +30,11 @@
     </ul>
   -->
     <SplashIntro />
+    <ProjectCard />
   </div>
 </template>
 
 <script setup lang="ts">
 import SplashIntro from './components/SplashIntro.vue'
+import ProjectCard from './components/ProjectCard.vue'
 </script>
