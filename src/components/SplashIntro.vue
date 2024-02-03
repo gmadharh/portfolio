@@ -1,16 +1,18 @@
 <template>
-  <div class="flex-auto flex-col justify-start">
+  <div
+    class="m-5 p-0 h-fit w-fit g-5 border-4 border-blue-400 flex flex-col justify-start items-start"
+  >
     <img
-      class="self-center justify-self-center"
-      src="../../public/favicon-32x32.png"
+      class="w-2/12 g-1"
+      src="../assets/profile.png"
       alt="Gevin Madharha Profile"
     />
-    <h1 class="lg">
+    <h1 class="text-3xl font-bold">
       Hi, my name is Gevin. I am
       <span class="personal-description">an engineer</span>.
     </h1>
-    <h6 class="lead">I'm currently working @ RBC as a contractor.</h6>
-    <div class="socials">
+    <h6 class="font-lora lead">I'm currently working @ RBC as a contractor.</h6>
+    <div class="flex-auto">
       <a href="https://github.com/gmadharh" target="_blank"
         ><i class="bi bi-github"></i
       ></a>

@@ -4,6 +4,7 @@ export default {
   theme: {
     fontFamily: {
       roboto: ['Roboto', 'sans-serif'],
+      lora: ['Lora', 'serif'],
     },
     colors: {
       'royal-purple': '#2c061f',

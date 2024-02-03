@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col items-center">
     <!-- 
     <h1 class="mb-4 text-3xl">Hey, welcome to my website.</h1>
     <p>
