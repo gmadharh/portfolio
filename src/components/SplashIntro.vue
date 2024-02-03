@@ -1,7 +1,11 @@
 <template>
-  <div class="vertical-center text-left">
-    <img src="../../public/favicon-32x32.png" alt="Gevin Madharha Profile" />
-    <h1>
+  <div class="flex-auto flex-col justify-start">
+    <img
+      class="self-center justify-self-center"
+      src="../../public/favicon-32x32.png"
+      alt="Gevin Madharha Profile"
+    />
+    <h1 class="lg">
       Hi, my name is Gevin. I am
       <span class="personal-description">an engineer</span>.
     </h1>
@@ -28,11 +32,10 @@ export default defineComponent({
     rollingDescriptions: function () {
       let descriptions = [
         'an engineer',
-        'a poet',
-        'a musician',
+        'a creator',
+        'a visionary',
         'a tinkerer',
         'an investor',
-        'a cat dad',
       ]
       let personal_desc_span = document.getElementsByClassName(
         'personal-description'
@@ -55,65 +58,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style scoped>
-.profile {
-  height: 6rem;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  margin: 40px 0 0;
-}
-
-.vertical-center {
-  width: 100%;
-  margin-top: 5%;
-  padding: 2rem;
-}
-
-.socials i {
-  font-size: 1.4rem;
-  padding: 0 0.35rem;
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  .vertical-center {
-    margin-top: 8%;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {
-  .vertical-center {
-    margin-top: 10%;
-  }
-
-  .profile {
-    height: 8rem;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {
-  .vertical-center {
-    margin-top: 5%;
-    padding-left: 3rem;
-  }
-}
-
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .socials i {
-    font-size: 1.5rem;
-  }
-}
-
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) {
-  .vertical-center {
-    margin-top: 4%;
-  }
-}
-</style>
