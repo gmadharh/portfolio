@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- 
     <h1 class="mb-4 text-3xl">Hey, welcome to my website.</h1>
     <p>
       There's nothing here right now, its currently a work in progress. But
@@ -27,7 +28,11 @@
         >
       </li>
     </ul>
+  -->
+    <SplashIntro />
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import SplashIntro from './components/SplashIntro.vue'
+</script>
