@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="m-5 p-0 h-full w-fit g-5 border-4 flex flex-col justify-start items-start"
-  >
+  <div class="flex flex-col items-start justify-start h-full m-10 w-fit g-5">
     <img
       class="w-2/12 g-1"
       src="../assets/profile.png"
@@ -11,13 +9,15 @@
       Hi, my name is Gevin. I am
       <span class="personal-description">an engineer</span>.
     </h1>
-    <h6 class="font-lora lead">I'm currently working @ RBC as a contractor.</h6>
+    <h6 class="font-lora lead">
+      I'm currently working @ TCS as a software developer.
+    </h6>
     <div class="flex gap-3 p-2">
       <a href="https://github.com/gmadharh" target="_blank"
-        ><button class="bi bi-github text-4xl"></button
+        ><button class="text-4xl bi bi-github"></button
       ></a>
       <a href="https://www.linkedin.com/in/gevinm/" target="_blank"
-        ><i class="bi bi-linkedin text-4xl"></i
+        ><i class="text-4xl bi bi-linkedin"></i
       ></a>
     </div>
   </div>
