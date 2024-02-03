@@ -1,6 +1,6 @@
 <template>
   <button
-    class="flex items-center justify-center flex-auto w-1/3 transition duration-300 ease-in-out delay-150 border rounded-full bg-fuchsia-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 border-12 h-14"
+    class="flex items-center justify-center flex-auto w-1/3 transition duration-300 ease-in-out delay-150 rounded-full bg-rose-900 hover:-translate-y-1 hover:scale-110 hover:bg-rose-500 border-12 h-14"
     type="button"
   >
     <img
