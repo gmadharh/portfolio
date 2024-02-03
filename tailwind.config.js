@@ -6,10 +6,6 @@ export default {
       roboto: ['Roboto', 'sans-serif'],
       lora: ['Lora', 'serif'],
     },
-    colors: {
-      'royal-purple': '#2c061f',
-      goldish: '#e1d89f',
-    },
     extend: {},
   },
   plugins: [],
