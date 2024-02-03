@@ -1,6 +1,6 @@
 <template>
   <div
-    class="m-5 p-0 h-fit w-fit g-5 border-4 border-blue-400 flex flex-col justify-start items-start"
+    class="m-5 p-0 h-full w-fit g-5 border-4 flex flex-col justify-start items-start"
   >
     <img
       class="w-2/12 g-1"
@@ -12,12 +12,12 @@
       <span class="personal-description">an engineer</span>.
     </h1>
     <h6 class="font-lora lead">I'm currently working @ RBC as a contractor.</h6>
-    <div class="flex-auto">
+    <div class="flex gap-3 p-2">
       <a href="https://github.com/gmadharh" target="_blank"
-        ><i class="bi bi-github"></i
+        ><button class="bi bi-github text-4xl"></button
       ></a>
       <a href="https://www.linkedin.com/in/gevinm/" target="_blank"
-        ><i class="bi bi-linkedin"></i
+        ><i class="bi bi-linkedin text-4xl"></i
       ></a>
     </div>
   </div>
