@@ -30,11 +30,25 @@
     </ul>
   -->
     <SplashIntro />
-    <ProjectCard />
+    <ProjectCard
+      v-for="project in projects"
+      :key="project.name"
+      :name="project.name"
+      :link="project.link"
+      :icon="project.icon"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
 import SplashIntro from './components/SplashIntro.vue'
 import ProjectCard from './components/ProjectCard.vue'
+
+const projects = [
+  {
+    name: 'Spotify Song Extractor',
+    link: 'https://chromewebstore.google.com/detail/spotify-song-extractor/mnaooedpbbimbgcjlfebmkomloakbeag?hl=en&authuser=2',
+    icon: '../assets/spotify-song-extractor.png',
+  },
+]
 </script>
