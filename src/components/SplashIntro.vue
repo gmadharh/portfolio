@@ -1,62 +1,64 @@
 <template>
-  <div class="flex flex-col items-start justify-start h-full m-10 w-fit">
+  <div class="m-10 flex h-full w-fit flex-col items-start justify-start">
     <img
-      class="self-center w-1/2 g-1 md:justify-self-start md:self-start md:w-1/4"
+      class="g-1 w-1/2 self-center md:w-1/4 md:self-start md:justify-self-start"
       src="../assets/profile.png"
       alt="Gevin Madharha Profile"
     />
-    <h1 class="text-2xl font-bold">
+    <h1 class="inline-block text-2xl font-bold">
       Hi, my name is Gevin. I am
-      <span class="personal-description">an engineer</span>.
+      <span class="personal-description w-0 overflow-hidden whitespace-nowrap">
+        an engineer
+      </span>
     </h1>
-    <h6 class="font-lora lead">
+    <h6 class="lead font-lora">
       I'm currently working @ TCS as a software developer.
     </h6>
     <div class="flex gap-3 p-2">
       <a href="https://github.com/gmadharh" target="_blank"
-        ><button class="text-4xl bi bi-github"></button
+        ><button class="bi bi-github text-4xl"></button
       ></a>
       <a href="https://www.linkedin.com/in/gevinm/" target="_blank"
-        ><i class="text-4xl bi bi-linkedin"></i
+        ><i class="bi bi-linkedin text-4xl"></i
       ></a>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
 export default defineComponent({
-  name: 'SplashIntro',
+  name: "SplashIntro",
   props: {
     msg: String,
   },
   methods: {
     rollingDescriptions: function () {
       let descriptions = [
-        'an engineer',
-        'a creator',
-        'a visionary',
-        'a tinkerer',
-        'an investor',
-      ]
+        "an engineer",
+        "a creator",
+        "a visionary",
+        "a tinkerer",
+        "an investor",
+      ];
       let personal_desc_span = document.getElementsByClassName(
-        'personal-description'
-      )[0]
+        "personal-description",
+      )[0];
       let curr_desc_i = descriptions.findIndex(
-        (desc) => desc == personal_desc_span.innerHTML
-      )
-      let new_desc_i = (curr_desc_i + 1) % descriptions.length
+        (desc) => desc == personal_desc_span.innerHTML,
+      );
+      let new_desc_i = (curr_desc_i + 1) % descriptions.length;
 
-      personal_desc_span.innerHTML = descriptions[new_desc_i]
+      personal_desc_span.innerHTML = descriptions[new_desc_i];
     },
   },
   mounted: function () {
-    setInterval(this.rollingDescriptions, 2500)
+    setInterval(this.rollingDescriptions, 2500);
   },
   unmounted: function () {
     for (let i = 0; i < 1000; i++) {
-      window.clearInterval(i)
+      window.clearInterval(i);
     }
   },
-})
+});
 </script>
