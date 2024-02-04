@@ -15,12 +15,18 @@
 import SplashIntro from './components/SplashIntro.vue'
 import ProjectCard from './components/ProjectCard.vue'
 import spotifyIcon from './assets/spotify-song-extractor.png'
+import pursuitIcon from './assets/pursuit-pioneer.png'
 
 const projects = [
   {
     name: 'Spotify Song Extractor',
     link: 'https://chromewebstore.google.com/detail/spotify-song-extractor/mnaooedpbbimbgcjlfebmkomloakbeag?hl=en&authuser=2',
     icon: spotifyIcon,
+  },
+  {
+    name: 'PursuitPioneer',
+    link: 'https://github.com/gmadharh/pursuit-pioneer',
+    icon: pursuitIcon,
   },
 ]
 </script>
