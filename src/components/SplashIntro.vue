@@ -1,11 +1,11 @@
 <template>
   <div class="flex flex-col items-start justify-start h-full m-10 w-fit g-5">
     <img
-      class="w-2/12 g-1"
+      class="self-center w-1/2 g-1 md:justify-self-start md:self-start md:w-1/4"
       src="../assets/profile.png"
       alt="Gevin Madharha Profile"
     />
-    <h1 class="text-3xl font-bold">
+    <h1 class="text-2xl font-bold">
       Hi, my name is Gevin. I am
       <span class="personal-description">an engineer</span>.
     </h1>
