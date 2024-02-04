@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-start justify-start h-full m-10 w-fit g-5">
+  <div class="flex flex-col items-start justify-start h-full m-10 w-fit">
     <img
       class="self-center w-1/2 g-1 md:justify-self-start md:self-start md:w-1/4"
       src="../assets/profile.png"
