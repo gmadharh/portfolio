@@ -7,8 +7,9 @@
     />
     <h1 class="inline-block text-2xl font-bold">
       Hi, my name is Gevin. I am
-      <span class="personal-description w-0 overflow-hidden whitespace-nowrap">
-        an engineer
+      <span
+        class="personal-description animate-fade-out-in w-0 overflow-hidden whitespace-nowrap"
+      >
       </span>
     </h1>
     <h6 class="lead font-lora">
@@ -43,13 +44,19 @@ export default defineComponent({
       ];
       let personal_desc_span = document.getElementsByClassName(
         "personal-description",
-      )[0];
+      )[0] as HTMLElement;
+
       let curr_desc_i = descriptions.findIndex(
         (desc) => desc == personal_desc_span.innerHTML,
       );
       let new_desc_i = (curr_desc_i + 1) % descriptions.length;
 
       personal_desc_span.innerHTML = descriptions[new_desc_i];
+
+      personal_desc_span.classList.remove("animate-fade-out-in");
+
+      void personal_desc_span.offsetWidth;
+      personal_desc_span.classList.add("animate-fade-out-in");
     },
   },
   mounted: function () {
