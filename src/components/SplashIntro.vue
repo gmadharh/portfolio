@@ -1,18 +1,18 @@
 <template>
-  <div class="m-10 flex h-full w-fit flex-col items-start justify-start">
+  <div class="m-4 flex h-full w-fit flex-col items-start justify-start md:m-8">
     <img
       class="g-1 w-1/2 self-center md:w-1/4 md:self-start md:justify-self-start"
       src="../assets/profile.png"
       alt="Gevin Madharha Profile"
     />
-    <h1 class="inline-block text-2xl font-bold">
+    <h1 class="inline-block pt-3 text-base font-bold md:text-2xl">
       Hi, my name is Gevin. I am
       <span
-        class="personal-description animate-fade-out-in w-0 overflow-hidden whitespace-nowrap"
+        class="personal-description w-0 animate-fade-out-in overflow-hidden whitespace-nowrap"
       >
       </span>
     </h1>
-    <h6 class="lead font-lora">
+    <h6 class="lead font-lora text-sm">
       I'm currently working @ TCS as a software developer.
     </h6>
     <div class="flex gap-3 p-2">
@@ -36,11 +36,15 @@ export default defineComponent({
   methods: {
     rollingDescriptions: function () {
       let descriptions = [
-        "an engineer",
         "a creator",
         "a visionary",
         "a tinkerer",
         "an investor",
+        "proactive",
+        "versatile",
+        "curious",
+        "efficient",
+        "persistent",
       ];
       let personal_desc_span = document.getElementsByClassName(
         "personal-description",
