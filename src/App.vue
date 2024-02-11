@@ -9,6 +9,11 @@
       :icon="project.icon"
     />
   </div>
+  <footer class="m-10">
+    <p class="text-right align-text-bottom text-xs">
+      &copy; 2024 Gevin Madharha. All Rights Reserved.
+    </p>
+  </footer>
 </template>
 
 <script setup lang="ts">
