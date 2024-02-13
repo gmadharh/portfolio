@@ -23,7 +23,7 @@
         ><i class="bi bi-linkedin text-4xl"></i
       ></a>
 
-      <a href="https://www.youtube.com/channel/UCTYgh_w12MwRA_I2aq73lrQ">
+      <a href="https://www.youtube.com/channel/UCTYgh_w12MwRA_I2aq73lrQ" target="_blank">
         <i class="bi bi-youtube text-4xl"></i>
       </a>
     </div>
