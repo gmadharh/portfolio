@@ -23,7 +23,7 @@
         ><i class="bi bi-linkedin text-4xl"></i
       ></a>
 
-      <a href="mailto:gevinmadharha@gmail.com">
+      <a href="mailto:contact@gevin.ca">
         <i class="bi bi-envelope-fill text-4xl"></i>
       </a>
       <a
