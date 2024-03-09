@@ -21,12 +21,18 @@ import SplashIntro from "./components/SplashIntro.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import spotifyIcon from "./assets/spotify-song-extractor.png";
 import pursuitIcon from "./assets/pursuit-pioneer.png";
+import zenTabIcon from "./assets/zen-tab.png";
 
 const projects = [
   {
     name: "Copyify",
     link: "https://chromewebstore.google.com/detail/spotify-song-extractor/mnaooedpbbimbgcjlfebmkomloakbeag?hl=en&authuser=2",
     icon: spotifyIcon,
+  },
+  {
+    name: "ZenTab",
+    link: "https://chromewebstore.google.com/detail/zentab-quotes-time/afaabopmcmehmmemkofeonpappbhfdgi?hl=en",
+    icon: zenTabIcon,
   },
   {
     name: "PursuitPioneer",
