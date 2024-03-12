@@ -22,6 +22,7 @@ import ProjectCard from "./components/ProjectCard.vue";
 import spotifyIcon from "./assets/spotify-song-extractor.png";
 import pursuitIcon from "./assets/pursuit-pioneer.png";
 import zenTabIcon from "./assets/zen-tab.png";
+import minimalIcon from "./assets/minimal.png";
 
 const projects = [
   {
@@ -38,6 +39,11 @@ const projects = [
     name: "PursuitPioneer",
     link: "https://github.com/gmadharh/pursuit-pioneer",
     icon: pursuitIcon,
+  },
+  {
+    name: "Minimal Todo",
+    link: "https://github.com/gmadharh/minimal-todo",
+    icon: minimalIcon,
   },
 ];
 </script>
