@@ -9,6 +9,7 @@
       Hi, my name is Gevin.
     </h1>
     <h6 class="lead font-lora text-sm">
+      
       I'm currently working @ Warner Bros. Discovery, Software Developer II.
     </h6>
     <div class="flex gap-3 p-2">
