@@ -12,11 +12,6 @@
       
     Developer, Hard Worker, Problem Solver at heart.
     </h6>
-    <div class="flex gap-3 p-2">
-      <a href="https://github.com/gmadharh" target="_blank"
-        ><button class="bi bi-github text-4xl"></button
-      ></a>
-    </div>
   </div>
 </template>
 
