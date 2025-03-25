@@ -12,7 +12,7 @@
 
      <br>
       <div>
-      <a class="underline text-slate-500" href="https://github.com/gmadharh">Github</a> <a class="underline text-slate-500" href="https://www.linkedin.com/in/gevinm/">LinkedIn</a> <a class="underline text-slate-500 ">Email</a> 
+      <a class="underline text-slate-500" href="https://github.com/gmadharh">Github</a> <a class="underline text-slate-500" href="https://www.linkedin.com/in/gevinm/">LinkedIn</a> <a class="underline text-slate-500 " href="mailto:contact@gevin.ca">Email</a> 
       </div>
     </p>
   </div>
