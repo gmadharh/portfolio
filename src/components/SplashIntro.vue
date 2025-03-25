@@ -10,7 +10,7 @@
     </h1>
     <h6 class="lead font-lora text-sm">
       
-      I'm currently working @ Warner Bros. Discovery, Software Developer II.
+    Developer, Hard Worker, Problem Solver at heart.
     </h6>
     <div class="flex gap-3 p-2">
       <a href="https://github.com/gmadharh" target="_blank"
