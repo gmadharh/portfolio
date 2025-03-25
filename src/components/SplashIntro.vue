@@ -16,9 +16,6 @@
       <a href="https://github.com/gmadharh" target="_blank"
         ><button class="bi bi-github text-4xl"></button
       ></a>
-      <a href="https://www.linkedin.com/in/gevinm/" target="_blank"
-        ><i class="bi bi-linkedin text-4xl"></i
-      ></a>
     </div>
   </div>
 </template>
