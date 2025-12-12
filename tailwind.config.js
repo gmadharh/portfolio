@@ -5,6 +5,8 @@ export default {
     fontFamily: {
       typewriter: ['"Special Elite"', 'monospace'],
       serif: ['"Lora"', '"Times New Roman"', 'serif'],
+      sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+      display: ['"Bebas Neue"', 'sans-serif'],
     },
     extend: {
       colors: {

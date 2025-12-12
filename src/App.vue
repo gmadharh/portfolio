@@ -19,9 +19,12 @@
     <div class="max-w-lg w-full space-y-12">
       <!-- Name -->
       <header class="space-y-4">
-        <h1 class="text-2xl md:text-3xl tracking-wide">
-          <span class="cursor">Gevin Madharha</span>
+        <h1 class="font-display text-4xl md:text-5xl tracking-wider uppercase">
+          <span :class="{ cursor: !nameComplete }">{{ displayedName }}</span>
         </h1>
+        <p v-if="showSubtitle" class="font-sans text-base md:text-lg opacity-70 tracking-wide">
+          I am <span class="cursor">{{ displayedTrait }}</span>
+        </p>
         <div class="w-16 h-px bg-current opacity-40"></div>
       </header>
 
@@ -118,6 +121,31 @@ import { ref, onMounted } from 'vue'
 const showDiscord = ref(false)
 const lightMode = ref(false)
 
+const fullName = 'Gevin Madharha'
+const displayedName = ref('')
+
+const traits = [
+  // Leadership & Character
+  'a leader.', 'ambitious.', 'driven.', 'relentless.', 'disciplined.', 'resilient.',
+  'tenacious.', 'bold.', 'fearless.', 'unstoppable.', 'determined.', 'focused.',
+  // Tech & Development
+  'a developer.', 'a builder.', 'technical.', 'a problem solver.', 'analytical.',
+  'a coder.', 'an engineer.', 'a technologist.', 'detail-oriented.', 'systematic.',
+  // Business & Startup
+  'an entrepreneur.', 'a founder.', 'innovative.', 'strategic.', 'visionary.',
+  'growth-minded.', 'resourceful.', 'opportunistic.', 'a dealmaker.', 'scalable.',
+  'a hustler.', 'execution-focused.', 'results-driven.', 'value-driven.',
+  // Faith & Purpose
+  'faithful.', 'purpose-driven.', 'blessed.', 'grateful.', 'called.', 'steadfast.',
+  'humble.', 'servant-hearted.', 'God-fearing.', 'redeemed.', 'hopeful.', 'joyful.',
+  // Creator & Impact
+  'a creator.', 'a maker.', 'a doer.', 'an innovator.', 'a disruptor.', 'a thinker.',
+  'a learner.', 'curious.', 'adaptable.', 'versatile.', 'hungry.', 'passionate.'
+]
+const displayedTrait = ref('')
+const showSubtitle = ref(false)
+const nameComplete = ref(false)
+
 const toggleTheme = () => {
   lightMode.value = !lightMode.value
   document.documentElement.classList.toggle('light', lightMode.value)
@@ -130,7 +158,67 @@ onMounted(() => {
     lightMode.value = true
     document.documentElement.classList.add('light')
   }
+
+  // Typing effect for name
+  let charIndex = 0
+  const typingInterval = setInterval(() => {
+    if (charIndex < fullName.length) {
+      displayedName.value = fullName.slice(0, charIndex + 1)
+      charIndex++
+    } else {
+      clearInterval(typingInterval)
+      nameComplete.value = true
+      // Start subtitle animation after name is done
+      setTimeout(() => {
+        showSubtitle.value = true
+        startTraitAnimation()
+      }, 300)
+    }
+  }, 80)
 })
+
+// Trait typing animation
+function startTraitAnimation() {
+  let traitIndex = 0
+  
+  function typeIn(trait: string, callback: () => void) {
+    let charIdx = 0
+    const interval = setInterval(() => {
+      charIdx++
+      displayedTrait.value = trait.slice(0, charIdx)
+      if (charIdx === trait.length) {
+        clearInterval(interval)
+        callback()
+      }
+    }, 80)
+  }
+  
+  function typeOut(trait: string, callback: () => void) {
+    let charIdx = trait.length
+    const interval = setInterval(() => {
+      charIdx--
+      displayedTrait.value = trait.slice(0, charIdx)
+      if (charIdx === 0) {
+        clearInterval(interval)
+        callback()
+      }
+    }, 50)
+  }
+  
+  function animateTrait() {
+    const currentTrait = traits[traitIndex]
+    typeIn(currentTrait, () => {
+      setTimeout(() => {
+        typeOut(currentTrait, () => {
+          traitIndex = (traitIndex + 1) % traits.length
+          setTimeout(animateTrait, 300)
+        })
+      }, 1500)
+    })
+  }
+  
+  animateTrait()
+}
 
 // Watch for changes and save to localStorage
 import { watch } from 'vue'
