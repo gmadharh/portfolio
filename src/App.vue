@@ -22,7 +22,7 @@
         <h1 class="font-display text-4xl md:text-5xl tracking-wider uppercase">
           <span :class="{ cursor: !nameComplete }">{{ displayedName }}</span>
         </h1>
-        <p v-if="showSubtitle" class="font-sans text-base md:text-lg opacity-70 tracking-wide">
+        <p v-if="showSubtitle" class="font-sans text-base md:text-lg opacity-0 tracking-wide animate-fade-in">
           I am <span class="cursor">{{ displayedTrait }}</span>
         </p>
         <div class="w-16 h-px bg-current opacity-40"></div>
@@ -124,7 +124,7 @@ const lightMode = ref(false)
 const fullName = 'Gevin Madharha'
 const displayedName = ref('')
 
-const traits = [
+const allTraits = [
   // Leadership & Character
   'a leader.', 'ambitious.', 'driven.', 'relentless.', 'disciplined.', 'resilient.',
   'tenacious.', 'bold.', 'fearless.', 'unstoppable.', 'determined.', 'focused.',
@@ -142,6 +142,9 @@ const traits = [
   'a creator.', 'a maker.', 'a doer.', 'an innovator.', 'a disruptor.', 'a thinker.',
   'a learner.', 'curious.', 'adaptable.', 'versatile.', 'hungry.', 'passionate.'
 ]
+
+// Shuffle traits on page load
+const traits = [...allTraits].sort(() => Math.random() - 0.5)
 const displayedTrait = ref('')
 const showSubtitle = ref(false)
 const nameComplete = ref(false)
@@ -202,7 +205,7 @@ function startTraitAnimation() {
         clearInterval(interval)
         callback()
       }
-    }, 50)
+    }, 30)
   }
   
   function animateTrait() {

@@ -26,11 +26,16 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '0.7' },
+        },
       },
       animation: {
         'blink': 'blink 1s step-end infinite',
         'type-in': 'typeIn 2s steps(40) forwards',
         'fade-up': 'fadeUp 0.6s ease-out forwards',
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
       },
     },
   },
