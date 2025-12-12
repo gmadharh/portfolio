@@ -1,3 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-ink text-paper transition-colors duration-300;
+  }
+
+  html.light {
+    @apply bg-paper text-ink;
+  }
+  
+  body {
+    @apply font-typewriter antialiased;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .social-btn {
+    @apply relative px-4 py-2 border border-paper/30 
+           transition-all duration-300 ease-out
+           hover:bg-paper hover:text-ink
+           hover:border-paper;
+  }
+  
+  .social-btn::before {
+    content: '>';
+    @apply absolute left-0 opacity-0 -translate-x-4
+           transition-all duration-300;
+  }
+  
+  .social-btn:hover::before {
+    @apply opacity-100 -translate-x-6;
+  }
+
+  /* Icon-based social buttons */
+  .social-icon {
+    @apply opacity-60 transition-all duration-300 ease-out
+           hover:opacity-100 hover:scale-110;
+  }
+
+  /* Tooltip container */
+  .tooltip-container {
+    @apply relative inline-block;
+  }
+
+  .tooltip {
+    @apply absolute left-1/2 -translate-x-1/2 -top-10
+           px-3 py-1.5 text-xs tracking-wider
+           bg-paper text-ink
+           opacity-0 pointer-events-none
+           transition-all duration-300 ease-out
+           whitespace-nowrap;
+  }
+
+  html.light .tooltip {
+    @apply bg-ink text-paper;
+  }
+
+  .tooltip::after {
+    content: '';
+    @apply absolute left-1/2 -translate-x-1/2 top-full
+           border-4 border-transparent border-t-paper;
+  }
+
+  html.light .tooltip::after {
+    @apply border-t-ink;
+  }
+
+  .tooltip-container:hover .tooltip,
+  .tooltip-visible {
+    @apply opacity-100 -top-12;
+  }
+}
+
+/* Cursor blink effect */
+.cursor::after {
+  content: '_';
+  @apply animate-blink;
+}
+
+/* Stagger animations */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }

@@ -3,20 +3,32 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,vue}"],
   theme: {
     fontFamily: {
-      roboto: ["Roboto", "sans-serif"],
-      lora: ["Lora", "serif"],
+      typewriter: ['"Special Elite"', 'monospace'],
+      serif: ['"Lora"', '"Times New Roman"', 'serif'],
     },
     extend: {
+      colors: {
+        ink: '#0a0a0a',
+        paper: '#fafafa',
+      },
       keyframes: {
-        fadeOutIn: {
-          "0%": { opacity: "0" },
-          "45%": { opacity: "1" },
-          "55%": { opacity: "1" },
-          "100%": { opacity: "0" },
+        blink: {
+          '0%, 50%': { opacity: '1' },
+          '51%, 100%': { opacity: '0' },
+        },
+        typeIn: {
+          '0%': { width: '0' },
+          '100%': { width: '100%' },
+        },
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
         },
       },
       animation: {
-        "fade-out-in": "fadeOutIn 2.5s forwards",
+        'blink': 'blink 1s step-end infinite',
+        'type-in': 'typeIn 2s steps(40) forwards',
+        'fade-up': 'fadeUp 0.6s ease-out forwards',
       },
     },
   },
