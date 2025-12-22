@@ -88,3 +88,13 @@
 .stagger-4 { animation-delay: 0.4s; }
 .stagger-5 { animation-delay: 0.5s; }
 .stagger-6 { animation-delay: 0.6s; }
+
+/* Light mode button hover fix */
+html.light a:hover,
+html.light button:hover {
+  --tw-text-opacity: 1;
+}
+
+html.light .group:hover {
+  @apply bg-ink text-paper border-ink;
+}
